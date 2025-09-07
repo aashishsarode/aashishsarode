@@ -2,7 +2,7 @@
 <h3 align="center">A PhD Student and Robotics & AI Enthusiast from Kitakyushu, Japan</h3>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/l1J9I5KMN8uP3A84U/giphy.gif" alt="animated space robot arm working on a satellite" width="600"/> 
+  <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*HwNr9WKNSR976YuFg8mrag.gif" alt="animated space robot arm working on a satellite" width="600"/> 
   </p>
 
 ---
