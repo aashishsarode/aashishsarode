@@ -15,7 +15,6 @@ I'm a passionate PhD student combining my interests in **Robotics and AI** to so
 - 🌱 I’m currently learning more about applying advanced reinforcement learning techniques for adaptive robotic manipulation and motion planning.
 - 👯 I’m looking to collaborate on open-source projects involving ROS 2, robotic control, or AI for space applications.
 - 💬 Ask me about anything related to robotic manipulation, simulation (Gazebo/Isaac Sim), control theory, or my research in space robotics.
-- 📫 How to reach me: **aashishsarode99@gmail.com**
 - ⚡ Fun fact: I'm fascinated by astrophotography and love capturing the cosmos!
 ---
 
