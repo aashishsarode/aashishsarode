@@ -1,39 +1,46 @@
 name: Metrics
 on:
-  # Schedule daily updates (midnight UTC)
-  schedule: [{cron: "0 0 * * *"}]
-  # Allow manual trigger
+  # Schedule daily updates (midnight Tokyo time)
+  schedule: [{cron: "0 15 * * *"}]
+  # Allow manual trigger from the "Actions" tab
   workflow_dispatch:
+  # Run on every push to main/master
   push: {branches: ["master", "main"]}
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-steps:
-  - uses: lowlighter/metrics@latest
-    with:
-     token: ${{ secrets.METRICS_TOKEN }}
-     user: aashishsarode
-     template: classic
-     base: header, activity, community, repositories, metadata
-     config_timezone: Asia/Tokyo
-          
-     # 1. Strict Language Filtering
-     plugin_languages: yes
-     plugin_languages_ignored: >-
-       html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell,
-       gnuplot, roff, jupyter notebook, ejs
-     # This list explicitly bans build tools and documentation formats.
-          
-     # 2. Limit to "True" Code
-     plugin_languages_limit: 6
-     plugin_languages_sections: most-used
-     plugin_languages_colors: github
-     plugin_languages_threshold: 1%
-     # Ignores any language that makes up less than 1% of your code.
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          # Your GitHub Token (Must be in Repository Secrets)
+          token: ${{ secrets.METRICS_TOKEN }}
 
-     # 3. Exclude Forks (Optional but Recommended)
-     repositories_forks: no
-     # This ensures the stats only reflect YOUR repositories, 
-     # not other people's code you have forked.
+          # Basic Options
+          user: aashishsarode
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Asia/Tokyo
+
+          # -----------------------------------------------------------
+          #  LANGUAGE CONFIGURATION (Clean & Accurate)
+          # -----------------------------------------------------------
+          plugin_languages: yes
+          
+          # 1. Ignore forks (Only count code YOU wrote)
+          repositories_forks: no
+
+          # 2. Ignore build tools, docs, and config files
+          plugin_languages_ignored: >-
+            html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell,
+            gnuplot, roff, jupyter notebook, ejs, vim script, smarty, xslt
+
+          # 3. Only show languages that make up > 1% of your code
+          plugin_languages_threshold: 1%
+          
+          # 4. Limit the list to top 6 relevant languages
+          plugin_languages_limit: 6
+          
+          # 5. Use GitHub's official colors
+          plugin_languages_colors: github
