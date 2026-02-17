@@ -32,9 +32,8 @@ I'm a passionate PhD student combining my interests in **Robotics and AI** to so
 ---
 
 ### 📊 My GitHub Stats
-
 <p align="center">
-  <img src="https://github.com/aashishsarode/aashishsarode/blob/main/github-metrics.svg" alt="Metrics" width="100%">
+  <img src="https://github.com/aashishsarode/aashishsarode/blob/main/github-metrics.svg" alt="My Metrics" width="100%">
 </p>
 
 ---
