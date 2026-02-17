@@ -34,12 +34,7 @@ I'm a passionate PhD student combining my interests in **Robotics and AI** to so
 ### 📊 My GitHub Stats
 
 <p align="center">
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img align="center" src="https://github-readme-stats.vercel.app/api?username=aashishsarode&show_icons=true&locale=en&theme=tokyonight&count_private=true" alt="aashishsarode's GitHub Stats" />
-  </a>
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=aashishsarode&layout=compact&locale=en&theme=tokyonight" alt="Top Languages" />
-  </a>
+  <img src="https://github.com/aashishsarode/aashishsarode/blob/main/github-metrics.svg" alt="Metrics" width="100%">
 </p>
 
 ---
